@@ -49,13 +49,6 @@ Antes de começar, você precisará ter instalado em sua máquina:
    ```bash
    ionic serve
    ```
-
-## 📸 Demonstração
-
-| Identificação | Visualização de Produto | Listagem Geral |
-| :---: | :---: | :---: |
-| ![Tab 1](https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/caminho/para/imagem1.png) | ![Tab 2](https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/caminho/para/imagem2.png) | ![Tab 3](https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/caminho/para/imagem3.png) |
-
 ---
 
 ## 👨‍💻 Desenvolvedor
