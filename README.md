@@ -1,143 +1,69 @@
-# Cartão Digital de Identificação - Ionic + Angular
+# Avaliação Formadora 3 - Consumo de API com Ionic
 
-Este é um projeto de **Cartão Digital de Identificação** desenvolvido com **Ionic** e **Angular**, convertido do projeto original que utilizava **Ionic + React**.
+Este repositório contém o código-fonte da **Avaliação Formadora 3**, desenvolvida para a disciplina de Desenvolvimento de Aplicativos Mobile da **UNISUAM**. O projeto consiste em uma aplicação móvel construída com o framework **Ionic** que consome dados de uma API externa para exibição de produtos de um e-commerce fictício.
 
-## 📱 Funcionalidades
+## 🚀 Sobre o Projeto
 
-- **Página Home**: Exibe um cartão digital com informações do estudante (foto, matrícula, turma, unidade e turno)
-- **Página About**: Apresenta informações sobre o estudante, sua jornada acadêmica, interesses e objetivos profissionais
-- **Navegação**: Transição suave entre as páginas
-- **Design Responsivo**: Otimizado para diferentes tamanhos de tela
-- **Tema Moderno**: Gradiente de cores roxo/azul com animações suaves
+A aplicação foi desenvolvida com o objetivo de demonstrar habilidades em integração de sistemas, consumo de APIs RESTful e manipulação de componentes de interface móvel. A estrutura utiliza o template de abas (`Tabs`) para organizar as funcionalidades solicitadas na atividade integradora.
+
+### Funcionalidades Principais:
+
+- **Identificação do Aluno (Tab 1):** Exibição dos dados acadêmicos do desenvolvedor.
+- **Visualização de Produtos (Tab 2):** Exibição detalhada de produtos individuais, permitindo a navegação sequencial (próximo/anterior) através de uma lista dinâmica.
+- **Listagem Geral (Tab 3):** Apresentação de todos os produtos disponíveis na API, com funcionalidade de suprimir/exibir a lista.
+- **Consumo de API:** Integração com a [Fake Store API](https://fakestoreapi.com/) para obtenção de dados reais em formato JSON via protocolo seguro **HTTPS**.
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Angular 19+**: Framework frontend moderno
-- **Ionic 8+**: Framework para aplicações mobile híbridas
-- **TypeScript**: Linguagem de programação tipada
-- **SCSS**: Pré-processador CSS para estilos avançados
-- **Capacitor**: Para integração com plataformas nativas (iOS/Android)
+O projeto foi construído utilizando as seguintes tecnologias:
 
-## 📦 Instalação
+- [Ionic Framework](https://ionicframework.com/) (v7/v8)
+- [Angular](https://angular.io/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Fake Store API](https://fakestoreapi.com/) para o backend simulado
 
-### Pré-requisitos
+## 📋 Pré-requisitos
 
-- Node.js (v18 ou superior)
-- npm ou pnpm
+Antes de começar, você precisará ter instalado em sua máquina:
+- [Node.js](https://nodejs.org/)
+- [Ionic CLI](https://ionicframework.com/docs/intro/cli)
 
-### Passos
+## 🔧 Instalação e Execução
 
-1. **Instalar dependências**:
+1. **Clone o repositório:**
    ```bash
-   npm install
-   # ou
-   pnpm install
+   git clone https://github.com/seu-usuario/seu-repositorio.git
    ```
 
-2. **Executar em desenvolvimento**:
+2. **Acesse a pasta do projeto:**
+   ```bash
+   cd seu-repositorio
+   ```
+
+3. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+
+4. **Execute a aplicação no navegador:**
    ```bash
    ionic serve
    ```
 
-3. **Acessar no navegador**:
-   Abra `http://localhost:8100` no seu navegador
+## 📸 Demonstração
 
-## 📁 Estrutura do Projeto
-
-```
-src/
-├── app/
-│   ├── home/
-│   │   ├── home.page.html      # Template da página Home
-│   │   ├── home.page.ts        # Lógica da página Home
-│   │   ├── home.page.scss      # Estilos da página Home
-│   │   └── home.page.spec.ts   # Testes da página Home
-│   ├── about/
-│   │   ├── about.page.html     # Template da página About
-│   │   ├── about.page.ts       # Lógica da página About
-│   │   ├── about.page.scss     # Estilos da página About
-│   │   └── about.page.spec.ts  # Testes da página About
-│   ├── app.routes.ts           # Configuração de rotas
-│   └── app.component.ts        # Componente raiz
-├── assets/
-│   └── profile.jpg             # Foto de perfil
-└── theme/
-    └── variables.scss          # Variáveis de tema
-```
-
-## 🎨 Personalização
-
-### Alterar Informações do Estudante
-
-Edite o arquivo `src/app/home/home.page.html` para alterar:
-- Nome do estudante
-- Matrícula
-- Turma
-- Unidade
-- Turno
-- Instituição
-- Curso
-
-### Alterar Cores
-
-As cores principais estão definidas nos arquivos SCSS:
-- Cor primária: `#667eea` (roxo/azul)
-- Cor secundária: `#764ba2` (roxo escuro)
-
-Edite os valores nos arquivos `home.page.scss` e `about.page.scss`.
-
-### Alterar Foto de Perfil
-
-Substitua o arquivo `src/assets/profile.jpg` pela sua foto desejada.
-
-## 🚀 Build para Produção
-
-```bash
-ionic build
-```
-
-## 📱 Compilar para Plataformas Nativas
-
-### iOS
-
-```bash
-ionic capacitor add ios
-ionic capacitor build ios
-```
-
-### Android
-
-```bash
-ionic capacitor add android
-ionic capacitor build android
-```
-
-## 🧪 Executar Testes
-
-```bash
-ng test
-```
-
-## 📚 Recursos Úteis
-
-- [Documentação do Ionic](https://ionicframework.com/docs)
-- [Documentação do Angular](https://angular.io/docs)
-- [Documentação do Capacitor](https://capacitorjs.com/docs)
-
-## 📝 Notas de Conversão
-
-Este projeto foi convertido de **Ionic + React** para **Ionic + Angular**. As principais mudanças incluem:
-
-- Substituição de componentes React por componentes Angular
-- Uso de `@angular/router` em vez de `react-router-dom`
-- Componentes standalone do Angular (sem NgModules)
-- SCSS em vez de CSS puro
-- TypeScript com decoradores do Angular
-
-## 📄 Licença
-
-Este projeto é fornecido como está para fins educacionais.
+| Identificação | Visualização de Produto | Listagem Geral |
+| :---: | :---: | :---: |
+| ![Tab 1](https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/caminho/para/imagem1.png) | ![Tab 2](https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/caminho/para/imagem2.png) | ![Tab 3](https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/caminho/para/imagem3.png) |
 
 ---
 
-**Desenvolvido com ❤️ usando Ionic + Angular**
+## 👨‍💻 Desenvolvedor
+
+**Gabriel da Silva Rocha**  
+Curso: Superior em Tecnologia de Análise e Desenvolvimento de Sistema  
+Unidade: BS (Bonsucesso)  
+Turma: ADS0301M  
+
+---
+*Este projeto foi realizado para fins acadêmicos na UNISUAM.*
