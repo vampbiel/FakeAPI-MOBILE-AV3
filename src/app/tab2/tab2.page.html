@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Produtos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div *ngIf="products.length > 0" class="product-container">
+    <ion-card class="product-card">
+      <div class="image-container">
+        <img [src]="products[currentIndex].image" class="product-image" />
+      </div>
+      <ion-card-header>
+        <ion-card-title>{{ products[currentIndex].title }}</ion-card-title>
+        <ion-card-subtitle>{{ products[currentIndex].category }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p class="description">{{ products[currentIndex].description }}</p>
+        <div class="price-tag">
+          <strong>Preço:</strong> ${{ products[currentIndex].price }}
+        </div>
+        <div class="product-id">ID: {{ products[currentIndex].id }}</div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div *ngIf="products.length === 0" class="ion-padding ion-text-center">
+    <ion-spinner name="crescent"></ion-spinner>
+    <p>Carregando produtos...</p>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="previousProduct()" [disabled]="currentIndex === 0" fill="solid" color="primary">
+        <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+        Botão 2
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="nextProduct()" [disabled]="currentIndex === products.length - 1" fill="solid" color="primary">
+        Botão 1
+        <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

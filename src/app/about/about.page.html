@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" text="Voltar"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Color Change</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding" [style.--background]="backgroundColor">
+  <div class="container">
+    <div class="controls">
+      <ion-item lines="none">
+        <ion-label position="stacked">Vermelho (R): {{ red }}</ion-label>
+        <ion-range min="0" max="255" [(ngModel)]="red" color="danger"></ion-range>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="stacked">Verde (G): {{ green }}</ion-label>
+        <ion-range min="0" max="255" [(ngModel)]="green" color="success"></ion-range>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="stacked">Azul (B): {{ blue }}</ion-label>
+        <ion-range min="0" max="255" [(ngModel)]="blue" color="primary"></ion-range>
+      </ion-item>
+    </div>
+
+    <div class="actions">
+      <ion-button expand="block" [style.--background]="buttonColor" (click)="updateButtonColor()">
+        Alterar Cor do Botão
+      </ion-button>
+
+      <ion-button expand="block" color="secondary" (click)="updateBackgroundColor()">
+        Alterar Cor de Fundo
+      </ion-button>
+
+      <ion-button expand="block" color="medium" (click)="goBack()">
+        Voltar (Manual)
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

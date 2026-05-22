@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Avaliação Formadora - C2</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="card-container">
+    <ion-card class="student-card">
+      <div class="photo-container">
+        <img src="assets/profile.jpg" alt="Foto do Aluno" class="profile-photo" />
+      </div>
+      
+      <ion-card-header>
+        <ion-card-title class="ion-text-center">Gabriel da Silva Rocha</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list lines="none">
+          <ion-item>
+            <ion-label>
+              <strong>Turma:</strong> ADS0301M
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <strong>Unidade:</strong> BS (Bonsucesso)
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <strong>Turno:</strong> Manhã
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <strong>Palavra-chave:</strong> MOBILE-IONIC-2026
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button expand="block" (click)="goToColorChange()" class="nav-button">
+      Ir para Color Change
+    </ion-button>
+  </div>
+</ion-content>

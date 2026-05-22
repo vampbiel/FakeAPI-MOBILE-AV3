@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Todos os Produtos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="action-container">
+    <ion-button expand="block" (click)="toggleList()" color="primary" fill="solid">
+      <ion-icon [name]="showList ? 'eye-off-outline' : 'eye-outline'" slot="start"></ion-icon>
+      {{ showList ? 'Suprimir Lista' : 'Botão 1 (Mostrar Todos)' }}
+    </ion-button>
+  </div>
+
+  <div *ngIf="showList" class="products-grid">
+    <ion-card *ngFor="let product of products" class="list-card">
+      <div class="list-image-container">
+        <img [src]="product.image" class="list-product-image" />
+      </div>
+      <ion-card-header>
+        <ion-card-title>{{ product.title }}</ion-card-title>
+        <ion-card-subtitle>{{ product.category }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="list-footer">
+          <span class="id-badge">ID: {{ product.id }}</span>
+          <ion-button fill="clear" color="primary">
+            <ion-icon name="cart-outline" slot="icon-only"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div *ngIf="products.length === 0 && showList" class="ion-padding ion-text-center">
+    <ion-spinner name="crescent"></ion-spinner>
+    <p>Carregando produtos...</p>
+  </div>
+</ion-content>

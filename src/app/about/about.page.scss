@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+.actions {
+  margin-bottom: 20px;
+}
+
+ion-item {
+  --background: transparent;
+  margin-bottom: 10px;
+}
+
+ion-range {
+  padding-top: 0;
+}
+
+ion-button {
+  margin-bottom: 10px;
+}
